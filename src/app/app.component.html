@@ -1,0 +1,18 @@
+SiteId :&nbsp; <br><br><input type="text" placeholder="SiteId" [(ngModel)]="SiteId" class="token"><br><br>
+SiteValue :&nbsp; <br><br><input type="text" placeholder="SiteValue" [(ngModel)]="SiteValue" class="token"><br><br>
+<hr><hr>
+<!-- Encryption <br><br>
+<input class="input" type="text" placeholder="data to encrypt" [(ngModel)]="request"><br><br>
+<input type="button" value="Encrypt" (click)="encryptUsingAES256()"><br><br>
+<span>
+Encrypted Text:<br> {{encrypted}}
+</span> -->
+
+<hr><hr>
+Decryption <br><br>
+<input class="input" type="text" placeholder="data to decrypt" [(ngModel)]="responce"><br><br>
+<input type="button" value="Decrypt" (click)="decryptUsingAES256()">&nbsp;
+
+<p>
+  Decrypted Text:<br> {{decrypted}}
+</p>
