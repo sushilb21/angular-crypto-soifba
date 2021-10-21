@@ -32,11 +32,13 @@ export class AppComponent {
     let _key = CryptoJS.enc.Utf8.parse(this.SiteId);
     let _iv = CryptoJS.enc.Utf8.parse(this.SiteValue);
 
-    this.decrypted = CryptoJS.AES.decrypt(this.encrypted, _key, {
+    this.decrypted = CryptoJS.AES.decrypt(this.responce, _key, {
       keySize: 128 / 8,
       iv: _iv,
       mode: CryptoJS.mode.CBC,
       padding: CryptoJS.pad.Pkcs7,
     }).toString(CryptoJS.enc.Utf8);
+
+    console.log(JSON.parse(this.decrypted));
   }
 }
